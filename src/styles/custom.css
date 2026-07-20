@@ -1,0 +1,15 @@
+:root {
+	--sl-color-accent: #f0b429;
+	--sl-color-accent-high: #ffd666;
+	--sl-color-accent-low: rgba(240, 180, 41, 0.14);
+	--sl-color-bg: #0f1117;
+	--sl-color-bg-nav: #161a22;
+	--sl-color-bg-sidebar: #161a22;
+	--sl-color-hairline: #2a3140;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent: #c4921f;
+	--sl-color-accent-high: #a67c00;
+	--sl-color-accent-low: rgba(196, 146, 31, 0.12);
+}

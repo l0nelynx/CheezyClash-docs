@@ -1,0 +1,49 @@
+---
+title: CheezyClash
+description: Кроссплатформенный клиент Mihomo (Clash.Meta) для Android и desktop.
+template: splash
+hero:
+  tagline: Современный прокси-клиент на базе Mihomo — Android и Windows desktop, режимы Proxy и TUN.
+  image:
+    alt: Логотип CheezyClash
+    file: ../../../assets/logo.svg
+  actions:
+    - text: Установка Windows
+      link: /ru/install/windows/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub Releases
+      link: https://github.com/l0nelynx/CheezyClash/releases
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Что такое CheezyClash?
+
+CheezyClash — open-source GUI-клиент для [Mihomo](https://github.com/MetaCubeX/mihomo) (Clash.Meta). Поддерживает Clash YAML, удалённые подписки, группы прокси, правила маршрутизации и мониторинг трафика на **Android** и **Windows desktop** (Electron).
+
+<CardGrid stagger>
+	<Card title="Установка" icon="rocket">
+		Скачать для [Windows](/ru/install/windows/) или [Android](/ru/install/android/). Сборки Linux/macOS desktop — в releases.
+	</Card>
+	<Card title="Возможности" icon="open-book">
+		[Профили](/ru/features/profiles/), [Прокси](/ru/features/proxies/), [Режимы](/ru/features/connection-modes/), [Access Control](/ru/features/access-control/) (desktop).
+	</Card>
+	<Card title="FAQ" icon="information">
+		Частые вопросы — см. [FAQ](/ru/faq/).
+	</Card>
+	<Card title="Решение проблем" icon="setting">
+		[Helper-сервис](/ru/troubleshooting/helper-service/) и [DNS](/ru/troubleshooting/dns-leaks/) на Windows.
+	</Card>
+</CardGrid>
+
+## Платформы
+
+| Платформа | Статус |
+| --------- | ------ |
+| Android (arm64, armv7, x86_64) | Поддерживается |
+| Windows desktop (x64) | Поддерживается |
+| Linux desktop | Сборки в CI |
+| macOS desktop | Сборки в CI |
