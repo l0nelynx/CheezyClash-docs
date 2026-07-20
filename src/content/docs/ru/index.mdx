@@ -1,9 +1,9 @@
 ---
 title: CheezyClash
-description: Кроссплатформенный клиент Mihomo (Clash.Meta) для Android и desktop.
+description: Руководство по клиенту CheezyClash для Android и desktop.
 template: splash
 hero:
-  tagline: Современный прокси-клиент на базе Mihomo — Android и Windows desktop, режимы Proxy и TUN.
+  tagline: Open-source клиент Mihomo — Android и Windows desktop, профили, подписки, Proxy/TUN.
   image:
     alt: Логотип CheezyClash
     file: ../../../assets/logo.svg
@@ -12,7 +12,10 @@ hero:
       link: /ru/install/windows/
       icon: right-arrow
       variant: primary
-    - text: GitHub Releases
+    - text: Установка Android
+      link: /ru/install/android/
+      icon: right-arrow
+    - text: Releases
       link: https://github.com/l0nelynx/CheezyClash/releases
       icon: external
       variant: minimal
@@ -20,30 +23,23 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Что такое CheezyClash?
+## Быстрый старт (desktop)
 
-CheezyClash — open-source GUI-клиент для [Mihomo](https://github.com/MetaCubeX/mihomo) (Clash.Meta). Поддерживает Clash YAML, удалённые подписки, группы прокси, правила маршрутизации и мониторинг трафика на **Android** и **Windows desktop** (Electron).
+1. Установите [релиз с GitHub](https://github.com/l0nelynx/CheezyClash/releases/latest).
+2. **Profiles** → URL подписки → **Import** → **Activate**.
+3. **Settings** → **Proxy** или **TUN** (для TUN на Windows нужен helper).
+4. **Home** → **Connect**. Сервер — на **Proxies** или карточке на Home.
 
 <CardGrid stagger>
 	<Card title="Установка" icon="rocket">
-		Скачать для [Windows](/ru/install/windows/) или [Android](/ru/install/android/). Сборки Linux/macOS desktop — в releases.
-	</Card>
-	<Card title="Возможности" icon="open-book">
-		[Профили](/ru/features/profiles/), [Прокси](/ru/features/proxies/), [Режимы](/ru/features/connection-modes/), [Access Control](/ru/features/access-control/) (desktop).
+		[Windows](/ru/install/windows/) · [Android](/ru/install/android/)
 	</Card>
 	<Card title="FAQ" icon="information">
-		Частые вопросы — см. [FAQ](/ru/faq/).
+		[Частые вопросы](/ru/faq/)
 	</Card>
-	<Card title="Решение проблем" icon="setting">
-		[Helper-сервис](/ru/troubleshooting/helper-service/) и [DNS](/ru/troubleshooting/dns-leaks/) на Windows.
+	<Card title="Helper" icon="warning">
+		[Служба TUN на Windows](/ru/troubleshooting/helper-service/)
 	</Card>
 </CardGrid>
 
-## Платформы
-
-| Платформа | Статус |
-| --------- | ------ |
-| Android (arm64, armv7, x86_64) | Поддерживается |
-| Windows desktop (x64) | Поддерживается |
-| Linux desktop | Сборки в CI |
-| macOS desktop | Сборки в CI |
+CheezyClash **не** продаёт VPN — вы используете **свой** Mihomo-конфиг и **свои** серверы.

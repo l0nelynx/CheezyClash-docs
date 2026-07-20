@@ -1,0 +1,62 @@
+---
+title: CheezyClash
+description: User guide for the CheezyClash Mihomo client on Android and desktop.
+template: splash
+hero:
+  tagline: Open-source Mihomo (Clash.Meta) client — Android app and Windows desktop with profiles, subscriptions, Proxy/TUN, and per-app rules.
+  image:
+    alt: CheezyClash logo
+    file: ../../assets/logo.svg
+  actions:
+    - text: Install on Windows
+      link: /install/windows/
+      icon: right-arrow
+      variant: primary
+    - text: Install on Android
+      link: /install/android/
+      icon: right-arrow
+    - text: Download releases
+      link: https://github.com/l0nelynx/CheezyClash/releases
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Quick start (desktop)
+
+1. Install from [GitHub Releases](https://github.com/l0nelynx/CheezyClash/releases/latest) (`CheezyClash-win-x64.exe`).
+2. Open **Profiles** → paste subscription URL → **Import** → **Activate**.
+3. **Settings** → choose **Proxy** (system proxy) or **TUN** (full tunnel; needs helper on Windows).
+4. **Home** → **Connect**. Pick a server on **Proxies** or from the server card on Home.
+
+## Quick start (Android)
+
+1. Install the APK matching your CPU (`arm64-v8a` for most phones).
+2. Add subscription or import profile.
+3. Tap connect and accept the Android VPN permission.
+
+<CardGrid stagger>
+	<Card title="Install" icon="rocket">
+		Step-by-step: [Windows](/install/windows/) · [Android](/install/android/)
+	</Card>
+	<Card title="Desktop UI" icon="laptop">
+		[Home & Connect](/desktop/home/) · [Settings](/desktop/settings/) · [Logs](/desktop/logs/)
+	</Card>
+	<Card title="Profiles & proxies" icon="document">
+		[Profiles](/features/profiles/) · [Proxies & latency](/features/proxies/) · [Subscriptions](/features/subscription/)
+	</Card>
+	<Card title="Problems?" icon="warning">
+		[Helper service](/troubleshooting/helper-service/) · [FAQ](/faq/)
+	</Card>
+</CardGrid>
+
+## What you need
+
+| Item | Notes |
+| ---- | ----- |
+| Mihomo profile | Clash YAML subscription URL or local file |
+| Windows x64 | For desktop; helper service for TUN |
+| Android 9+ | VPN permission required to connect |
+
+CheezyClash is **not** a VPN provider — it runs **your** Mihomo config and connects to **your** proxy servers.

@@ -6,19 +6,27 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	site: 'https://l0nelynx.github.io',
 	base: '/CheezyClash-docs',
+	trailingSlash: 'always',
 	integrations: [
 		starlight({
 			title: 'CheezyClash',
 			description:
-				'Documentation for CheezyClash — a cross-platform Mihomo (Clash.Meta) client for Android and desktop.',
+				'User guide for CheezyClash — Mihomo (Clash.Meta) client for Android and desktop.',
 			logo: {
 				src: './src/assets/logo.svg',
 				replacesTitle: true,
 			},
-			defaultLocale: 'en',
+			// English at /CheezyClash-docs/… without /en/ prefix; Russian at /ru/…
+			defaultLocale: 'root',
 			locales: {
-				en: { label: 'English' },
-				ru: { label: 'Русский', lang: 'ru' },
+				root: {
+					label: 'English',
+					lang: 'en',
+				},
+				ru: {
+					label: 'Русский',
+					lang: 'ru',
+				},
 			},
 			social: [
 				{
@@ -35,70 +43,36 @@ export default defineConfig({
 				{
 					label: 'Getting started',
 					translations: { ru: 'Начало работы' },
-					items: [
-						{
-							label: 'Overview',
-							translations: { ru: 'Обзор' },
-							slug: 'getting-started/overview',
-						},
-					],
+					items: [{ label: 'Overview', translations: { ru: 'Обзор' }, slug: 'getting-started/overview' }],
 				},
 				{
 					label: 'Install',
 					translations: { ru: 'Установка' },
 					items: [
-						{
-							label: 'Windows',
-							slug: 'install/windows',
-						},
-						{
-							label: 'Android',
-							slug: 'install/android',
-						},
-						{
-							label: 'Linux',
-							slug: 'install/linux',
-						},
-						{
-							label: 'macOS',
-							slug: 'install/macos',
-						},
+						{ label: 'Windows', slug: 'install/windows' },
+						{ label: 'Android', slug: 'install/android' },
+						{ label: 'Linux', slug: 'install/linux' },
+						{ label: 'macOS', slug: 'install/macos' },
+					],
+				},
+				{
+					label: 'Desktop guide',
+					translations: { ru: 'Desktop' },
+					items: [
+						{ label: 'Home & Connect', slug: 'desktop/home' },
+						{ label: 'Settings', slug: 'desktop/settings' },
+						{ label: 'Logs & Zashboard', slug: 'desktop/logs' },
 					],
 				},
 				{
 					label: 'Features',
 					translations: { ru: 'Возможности' },
 					items: [
-						{
-							label: 'Profiles',
-							translations: { ru: 'Профили' },
-							slug: 'features/profiles',
-						},
-						{
-							label: 'Proxies',
-							translations: { ru: 'Прокси' },
-							slug: 'features/proxies',
-						},
-						{
-							label: 'Connection modes',
-							translations: { ru: 'Режимы подключения' },
-							slug: 'features/connection-modes',
-						},
-						{
-							label: 'Access Control',
-							translations: { ru: 'Контроль доступа' },
-							slug: 'features/access-control',
-						},
-						{
-							label: 'Subscription',
-							translations: { ru: 'Подписка' },
-							slug: 'features/subscription',
-						},
-						{
-							label: 'Traffic',
-							translations: { ru: 'Трафик' },
-							slug: 'features/traffic',
-						},
+						{ label: 'Profiles', translations: { ru: 'Профили' }, slug: 'features/profiles' },
+						{ label: 'Proxies', translations: { ru: 'Прокси' }, slug: 'features/proxies' },
+						{ label: 'Connection modes', translations: { ru: 'Режимы' }, slug: 'features/connection-modes' },
+						{ label: 'Access Control', slug: 'features/access-control' },
+						{ label: 'Subscription', translations: { ru: 'Подписка' }, slug: 'features/subscription' },
 					],
 				},
 				{
@@ -110,32 +84,8 @@ export default defineConfig({
 					label: 'Troubleshooting',
 					translations: { ru: 'Решение проблем' },
 					items: [
-						{
-							label: 'Helper service',
-							translations: { ru: 'Helper-сервис' },
-							slug: 'troubleshooting/helper-service',
-						},
-						{
-							label: 'DNS leaks',
-							translations: { ru: 'Утечки DNS' },
-							slug: 'troubleshooting/dns-leaks',
-						},
-					],
-				},
-				{
-					label: 'About',
-					translations: { ru: 'О приложении' },
-					items: [
-						{
-							label: 'Architecture',
-							translations: { ru: 'Архитектура' },
-							slug: 'about/architecture',
-						},
-						{
-							label: 'Privacy',
-							translations: { ru: 'Конфиденциальность' },
-							slug: 'about/privacy',
-						},
+						{ label: 'Helper service', translations: { ru: 'Helper' }, slug: 'troubleshooting/helper-service' },
+						{ label: 'DNS', translations: { ru: 'DNS' }, slug: 'troubleshooting/dns-leaks' },
 					],
 				},
 			],
