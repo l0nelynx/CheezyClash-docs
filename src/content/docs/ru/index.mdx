@@ -3,20 +3,23 @@ title: CheezyClash
 description: Руководство по клиенту CheezyClash для Android и desktop.
 template: splash
 hero:
-  tagline: Open-source клиент Mihomo — Android и Windows desktop, профили, подписки, Proxy/TUN.
+  tagline: Open-source клиент Mihomo — Android, Windows, macOS и Linux; профили, подписки, Proxy/TUN.
   image:
     alt: Логотип CheezyClash
     file: ../../../assets/logo.svg
   actions:
     - text: Установка Windows
-      link: /ru/install/windows/
+      link: install/windows/
       icon: right-arrow
       variant: primary
+    - text: Установка macOS
+      link: install/macos/
+      icon: right-arrow
     - text: Установка Android
-      link: /ru/install/android/
+      link: install/android/
       icon: right-arrow
     - text: Releases
-      link: https://github.com/l0nelynx/CheezyClash/releases
+      link: https://github.com/l0nelynx/CheezyClash/releases/latest
       icon: external
       variant: minimal
 ---
@@ -25,14 +28,16 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Быстрый старт (desktop)
 
-1. Установите [релиз с GitHub](https://github.com/l0nelynx/CheezyClash/releases/latest).
+1. Установите [релиз с GitHub](https://github.com/l0nelynx/CheezyClash/releases/latest):
+   - Windows — [`CheezyClash-win-x64.exe`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-win-x64.exe)
+   - macOS — [`CheezyClash-mac-arm64.dmg`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-mac-arm64.dmg) (Apple Silicon) или [`CheezyClash-mac-x64.dmg`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-mac-x64.dmg) (Intel)
 2. **Profiles** → URL подписки → **Import** → **Activate**.
 3. **Settings** → **Proxy** или **TUN** (для TUN на Windows нужен helper).
 4. **Home** → **Connect**. Сервер — на **Proxies** или карточке на Home.
 
 <CardGrid stagger>
 	<Card title="Установка" icon="rocket">
-		[Windows](/ru/install/windows/) · [Android](/ru/install/android/)
+		[Windows](/ru/install/windows/) · [macOS](/ru/install/macos/) · [Android](/ru/install/android/)
 	</Card>
 	<Card title="FAQ" icon="information">
 		[Частые вопросы](/ru/faq/)

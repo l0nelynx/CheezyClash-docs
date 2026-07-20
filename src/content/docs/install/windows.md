@@ -5,15 +5,12 @@ description: Install and first run of CheezyClash desktop on Windows 10/11 x64.
 
 ## Download
 
-[GitHub Releases → latest](https://github.com/l0nelynx/CheezyClash/releases/latest)
-
 | File | When to use |
 | ---- | ----------- |
-| `CheezyClash-win-x64.exe` | Normal install (registers TUN helper) |
-| `CheezyClash-win-x64.zip` | Portable — extract and run |
+| [CheezyClash-win-x64.exe](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-win-x64.exe) | Normal install (registers TUN helper) |
+| [CheezyClash-win-x64.zip](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-win-x64.zip) | Portable — extract and run |
 
-Links stay stable (`…/latest/download/CheezyClash-win-x64.exe`).
-
+All builds: [GitHub Releases → latest](https://github.com/l0nelynx/CheezyClash/releases/latest)
 ## Install (NSIS)
 
 1. Run the installer, choose install location.

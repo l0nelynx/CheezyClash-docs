@@ -3,20 +3,23 @@ title: CheezyClash
 description: User guide for the CheezyClash Mihomo client on Android and desktop.
 template: splash
 hero:
-  tagline: Open-source Mihomo (Clash.Meta) client — Android app and Windows desktop with profiles, subscriptions, Proxy/TUN, and per-app rules.
+  tagline: Open-source Mihomo (Clash.Meta) client — Android, Windows, macOS, and Linux with profiles, subscriptions, Proxy/TUN, and per-app rules.
   image:
     alt: CheezyClash logo
     file: ../../assets/logo.svg
   actions:
     - text: Install on Windows
-      link: /install/windows/
+      link: install/windows/
       icon: right-arrow
       variant: primary
+    - text: Install on macOS
+      link: install/macos/
+      icon: right-arrow
     - text: Install on Android
-      link: /install/android/
+      link: install/android/
       icon: right-arrow
     - text: Download releases
-      link: https://github.com/l0nelynx/CheezyClash/releases
+      link: https://github.com/l0nelynx/CheezyClash/releases/latest
       icon: external
       variant: minimal
 ---
@@ -25,7 +28,10 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Quick start (desktop)
 
-1. Install from [GitHub Releases](https://github.com/l0nelynx/CheezyClash/releases/latest) (`CheezyClash-win-x64.exe`).
+1. Install from [GitHub Releases](https://github.com/l0nelynx/CheezyClash/releases/latest):
+   - Windows — [`CheezyClash-win-x64.exe`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-win-x64.exe)
+   - macOS — [`CheezyClash-mac-arm64.dmg`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-mac-arm64.dmg) (Apple Silicon) or [`CheezyClash-mac-x64.dmg`](https://github.com/l0nelynx/CheezyClash/releases/latest/download/CheezyClash-mac-x64.dmg) (Intel)
+   - Linux — AppImage / `.deb` on the [releases page](https://github.com/l0nelynx/CheezyClash/releases/latest)
 2. Open **Profiles** → paste subscription URL → **Import** → **Activate**.
 3. **Settings** → choose **Proxy** (system proxy) or **TUN** (full tunnel; needs helper on Windows).
 4. **Home** → **Connect**. Pick a server on **Proxies** or from the server card on Home.
@@ -38,7 +44,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <CardGrid stagger>
 	<Card title="Install" icon="rocket">
-		Step-by-step: [Windows](/install/windows/) · [Android](/install/android/)
+		[Windows](/install/windows/) · [macOS](/install/macos/) · [Android](/install/android/) · [Linux](/install/linux/)
 	</Card>
 	<Card title="Desktop UI" icon="laptop">
 		[Home & Connect](/desktop/home/) · [Settings](/desktop/settings/) · [Logs](/desktop/logs/)
@@ -56,7 +62,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 | Item | Notes |
 | ---- | ----- |
 | Mihomo profile | Clash YAML subscription URL or local file |
-| Windows x64 | For desktop; helper service for TUN |
+| Windows x64 | Desktop; helper service for TUN |
+| macOS 11+ | Apple Silicon or Intel `.dmg` / zip from Releases |
+| Linux x64 / arm64 | AppImage, deb, or zip |
 | Android 9+ | VPN permission required to connect |
 
 CheezyClash is **not** a VPN provider — it runs **your** Mihomo config and connects to **your** proxy servers.

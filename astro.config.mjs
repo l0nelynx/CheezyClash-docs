@@ -1,12 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { rehypeBaseLinks } from './src/plugins/rehype-base-links.mjs';
+
+const base = '/CheezyClash-docs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://l0nelynx.github.io',
-	base: '/CheezyClash-docs',
+	base,
 	trailingSlash: 'always',
+	markdown: {
+		rehypePlugins: [[rehypeBaseLinks, base]],
+	},
 	integrations: [
 		starlight({
 			title: 'CheezyClash',

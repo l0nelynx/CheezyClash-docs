@@ -10,3 +10,9 @@
 	--sl-color-accent-high: #8a6608;
 	--sl-color-accent-low: rgba(184, 134, 11, 0.12);
 }
+
+/* Black logo: visible on light theme; invert on dark theme */
+:root[data-theme='dark'] .hero img,
+:root[data-theme='dark'] .site-title img {
+	filter: brightness(0) invert(1);
+}
